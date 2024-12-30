@@ -14,6 +14,7 @@ import MyApplications from "../Pages/MyApplications/MyApplications";
 import AddJob from "../Pages/AddJob/AddJob";
 import MyPostedJobs from "../Pages/MyPostedJobs/MyPostedJobs";
 import ViewApplications from "../Pages/ViewApplications/ViewApplications";
+import AllJobs from "../Pages/AllJobs";
 
   const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ import ViewApplications from "../Pages/ViewApplications/ViewApplications";
         {
           path:'addJob',
           element:<PrivateRoute><AddJob></AddJob></PrivateRoute>
+        },
+        {
+          path:'jobs',
+          element:<AllJobs></AllJobs>
         },
         {
           path:'myPostedJobs',

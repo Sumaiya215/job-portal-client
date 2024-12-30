@@ -18,7 +18,7 @@ const AddJob = () => {
         console.log(min, max, currency, newJob);
         newJob.requirements = newJob.requirements.split('\n');
         newJob.responsibilities = newJob.responsibilities.split('\n');
-        newJob.salaryRange = {min,max, currency}
+        newJob.salaryRange = {min: parseInt(min),max:parseInt(max),currency}
         console.log(newJob);
 
         fetch('https://job-portal-server-lyart.vercel.app/jobs',{
@@ -146,7 +146,7 @@ const AddJob = () => {
                     <label className="label">
                         <span className="label-text">HR Email</span>
                     </label>
-                    <input type="email" defaultValue={user?.email} name="hr_email" placeholder="HR Email" className="input input-bordered" required />
+                    <input type="email" defaultValue={user?.email} name="hr_email" placeholder="HR Email" className="input input-bordered" readOnly />
                 </div>
                  {/* Application Deadline */}
                  <div className="form-control">
